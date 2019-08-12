@@ -185,7 +185,7 @@ function print_upcoming_event ( $e, $date ) {
     }
     $link = "<a class=\"entry\" id=\"$popupid\" title=\"" .
       htmlspecialchars ( $e->getName() ) . '" href="' .
-      $SERVER_URL . 'view_entry.php?id=' .
+      'view_entry.php?id=' .
       $e->getID() . "&amp;date=$date&amp;user=" . $e->getLogin()
        . ( empty( $link_target ) ? '>' : "\" target=\"$link_target\">" );
     if ( empty ( $UPCOMING_DISPLAY_CAT_ICONS ) ||
