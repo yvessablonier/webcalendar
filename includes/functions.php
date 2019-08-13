@@ -1256,14 +1256,14 @@ function display_navigation ( $name, $show_arrows = true, $show_cats = true ) {
   }
 
   return $ret . '</span>
-          <span class="user">'
+          <span class="user"></span>'
   // Display current calendar's user (if not in single user).
-  . ( $single_user == 'N' ? '<br />' . $user_fullname : '' )
-   . ( $is_nonuser_admin ||
-    ( $is_admin && ! empty ( $user ) && $user == '__public__' )
-    ? '<br />-- ' . translate ( 'Admin mode' ) . ' --' : '' )
-   . ( $is_assistant
-    ? '<br />-- ' . translate ( 'Assistant mode' ) . ' --' : '' ) . '</span>'
+  //. ( $single_user == 'N' ? '<br />' . $user_fullname : '' )
+  // . ( $is_nonuser_admin ||
+  //  ( $is_admin && ! empty ( $user ) && $user == '__public__' )
+  //  ? '<br />-- ' . translate ( 'Admin mode' ) . ' --' : '' )
+  // . ( $is_assistant
+  //  ? '<br />-- ' . translate ( 'Assistant mode' ) . ' --' : '' ) . '</span>'
    . ( $CATEGORIES_ENABLED == 'Y' && $show_cats &&
     ( ! $user || ( $user == $login || $is_assistant ) ) ? '<br /><br />'
      . print_category_menu ( $name,

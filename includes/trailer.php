@@ -7,8 +7,8 @@ defined ( '_ISVALID' ) or die ( 'You cannot access this file directly!' );
 $tret = '';
 if ( access_can_access_function ( ACCESS_TRAILER ) ) {
   $tret .= '
-    <div id="trailer">
-      <div id="menu">' . "\n";
+  <div id="trailer">
+   <div id="menu">' . "\n";
 
   $goto_link = $manage_calendar_link = $reports_link = $views_link = [];
 
@@ -240,14 +240,14 @@ if ( access_can_access_function ( ACCESS_TRAILER ) ) {
         ? '?return_path=' . $login_return_path : '' );
     }
 
-    if ( $readonly != 'Y' )
+    /*if ( $readonly != 'Y' )
       $tret .= '<br /><span class="prefix">' . $currentUserStr . ':</span>&nbsp;'
        . ( strlen ( $login ) && $login != '__public__'
         ? $fullname . '&nbsp;(<a title="' . $logoutStr . '" href="'
          . $logout_url . '">' . $logoutStr
         : // For public user (who did not actually login).
         $publicStr . '&nbsp;(<a title="' . $loginStr . '" href="' . $login_url
-         . '">' . $loginStr ) . "</a>)\n";
+         . '">' . $loginStr ) . "</a>)\n";*/
   }
 
   // Manage Calendar links.
@@ -305,11 +305,11 @@ if ( access_can_access_function ( ACCESS_TRAILER ) ) {
   }
 
   // WebCalendar Info...
-  $tret .= '<br /><br />
+  /*$tret .= '<br /><br />
 <a title="' . $GLOBALS['PROGRAM_NAME'] . '" id="programname" href="'
    . $GLOBALS['PROGRAM_URL'] . '" target="_blank">' . $GLOBALS['PROGRAM_NAME']
    . "</a>\n" . '</div></div>
-<!-- /TRAILER -->' . "\n";
+<!-- /TRAILER -->' . "\n";*/
 }
 $tret .= '<!-- Db queries: ' . dbi_num_queries() . '   Cached queries: '
  . dbi_num_cached_queries() . " -->\n";
